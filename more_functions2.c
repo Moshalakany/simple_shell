@@ -9,6 +9,7 @@
 char **search_for_key(char **env, char *key)
 {
 	unsigned int count1, count2, length;
+
 	length = _strlen(key);
 	for (count1 = 0; env[count1] != NULL; count1++)
 	{
@@ -92,7 +93,7 @@ char *add_new_value(char *key, char *value)
  * Return: pointer to the converted string
  */
 
-char* _uitoa(unsigned int count)
+char *_uitoa(unsigned int count)
 {
 	char *num_str;
 	unsigned int temp, digit;
@@ -118,11 +119,10 @@ char* _uitoa(unsigned int count)
 
 /**
  * _atoi - converts a string into an integer
- * @str: string to convert
- *
+ * @s: string to convert
  * Return: the integer value, or -1 if an error occurs
  */
-int _atoi(char* s)
+int _atoi(char *s)
 {
 	int sign = 1;
 	unsigned int total = 0;
